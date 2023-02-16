@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">ApplicationGPS</string>
+    <string name="User">User</string>
+    <string name="Password">Password</string>
+    <string name="Bottonentrar">Entrar</string>
+    <string name="Bottonreturn">Atrás</string>
+    <string name="Bottonform">Formulario</string>
+    <string name="Bottoninfo">Información</string>
+    <string name="Bottonevidence">Evidencia</string>
+    <string name="title_activity_location">LocationActivity</string>
+</resources>

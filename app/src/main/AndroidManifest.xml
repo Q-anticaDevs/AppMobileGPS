@@ -25,24 +25,28 @@
         -->
         <meta-data
             android:name="com.google.android.geo.API_KEY"
-            android:value="YOUR_API_KEY" />
+            android:value="AIzaSyBS9GgavFaXHumLjm0eCrIEe33042UQ9oo" />
 
         <activity
             android:name=".EvidenceActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:label="Evidencia"/>
         <activity
             android:name=".InfoActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:label="Información"/>
         <activity
             android:name=".FormActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:label="Formulario"/>
         <activity
             android:name=".LocationActivity"
             android:exported="false"
-            android:label="@string/title_activity_location" />
+            android:label="Mapa" />
         <activity
             android:name=".MainActivity"
-            android:exported="true">
+            android:exported="true"
+            android:label="App GPS">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

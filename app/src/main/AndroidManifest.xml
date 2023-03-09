@@ -4,7 +4,8 @@
 
     <uses-feature
         android:name="android.hardware.camera"
-        android:required="true"></uses-feature>
+        android:required="true" />
+
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
@@ -14,7 +15,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.ApplicationGPS"
         tools:targetApi="31">
-
+        <activity
+            android:name=".SignatureActivity"
+            android:exported="false" />
         <!--
              TODO: Before you run your application, you need a Google Maps API key.
 
@@ -33,15 +36,15 @@
         <activity
             android:name=".EvidenceActivity"
             android:exported="false"
-            android:label="Evidencia"/>
+            android:label="Evidencia" />
         <activity
             android:name=".InfoActivity"
             android:exported="false"
-            android:label="Información"/>
+            android:label="Información" />
         <activity
             android:name=".FormActivity"
             android:exported="false"
-            android:label="Formulario"/>
+            android:label="Formulario" />
         <activity
             android:name=".LocationActivity"
             android:exported="false"

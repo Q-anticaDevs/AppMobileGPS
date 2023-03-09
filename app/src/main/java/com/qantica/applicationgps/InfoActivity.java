@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.MenuItem;
 import android.view.View;
 
 public class InfoActivity extends AppCompatActivity {
@@ -13,11 +14,19 @@ public class InfoActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_info);
+
+        //Habilita la flecha de retroceso
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
     }
 
-    public void regresar(View view){
-        this.view = view;
-        Intent enter = new Intent(this, LocationActivity.class);
-        startActivity(enter);
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        int id = item.getItemId();
+        if (id == android.R.id.home) {
+            onBackPressed();
+            return true;
+        }
+        return super.onOptionsItemSelected(item);
     }
 }

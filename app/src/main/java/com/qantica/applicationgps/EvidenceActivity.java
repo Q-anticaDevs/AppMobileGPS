@@ -6,8 +6,10 @@ import android.content.Intent;
 import android.graphics.Bitmap;
 import android.os.Bundle;
 import android.provider.MediaStore;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageView;
+import android.widget.Toolbar;
 
 public class EvidenceActivity extends AppCompatActivity {
 
@@ -19,6 +21,10 @@ public class EvidenceActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_evidence);
 
+        //Habilita la flecha de retroceso
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
+        //Habilita la cámara
         evidenceCamera = findViewById(R.id.evidenceCamera);
         evidenceView = findViewById(R.id.evidenceView);
 
@@ -30,6 +36,17 @@ public class EvidenceActivity extends AppCompatActivity {
         });
 
     }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        int id = item.getItemId();
+        if (id == android.R.id.home) {
+            onBackPressed();
+            return true;
+        }
+        return super.onOptionsItemSelected(item);
+    }
+
     private void openCamera(){
         Intent intent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
         startActivityForResult(intent, 1);
@@ -42,10 +59,5 @@ public class EvidenceActivity extends AppCompatActivity {
             Bitmap imgBitmap = (Bitmap) extras.get("data");
             evidenceView.setImageBitmap(imgBitmap);
         }
-    }
-    public void regresar(View view){
-        this.view = view;
-        Intent enter = new Intent(this, LocationActivity.class);
-        startActivity(enter);
     }
 }

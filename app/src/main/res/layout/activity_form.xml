@@ -7,35 +7,6 @@
     android:background="@color/white"
     tools:context=".FormActivity">
 
-    <LinearLayout
-        android:id="@+id/linearLayout"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        tools:ignore="MissingConstraints">
-
-        <ImageView
-            android:id="@+id/backb"
-            android:layout_width="20dp"
-            android:layout_height="40dp"
-            android:layout_weight="1"
-            android:onClick="regresar"
-            android:textAlignment="textEnd"
-            android:outlineSpotShadowColor="@color/azul"
-            app:srcCompat="?attr/homeAsUpIndicator" />
-
-        <TextView
-            android:id="@+id/infotext"
-            android:layout_width="300dp"
-            android:layout_height="47dp"
-            android:layout_weight="1"
-            android:text="  Formulario"
-            android:textAlignment="textStart"
-            android:textColorHighlight="@color/azul"
-            android:textSize="30sp" />
-
-    </LinearLayout>
-
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -161,6 +132,8 @@
                         android:layout_width="wrap_content"
                         android:layout_height="60dp"
                         android:layout_weight="1"
+                        android:contentDescription="@string/Bottonentrar"
+                        android:onClick="firmado"
                         app:srcCompat="@android:drawable/ic_menu_edit" />
 
                 </LinearLayout>

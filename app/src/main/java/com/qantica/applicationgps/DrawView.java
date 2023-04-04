@@ -47,4 +47,9 @@ public class DrawView extends View {
         invalidate();
         return true;
     }
+
+    public void clear() {
+        path.reset();
+        invalidate();
+    }
 }

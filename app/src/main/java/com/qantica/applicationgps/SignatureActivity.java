@@ -4,6 +4,8 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.constraintlayout.widget.ConstraintLayout;
 
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
 
 public class SignatureActivity extends AppCompatActivity {
 
@@ -24,5 +26,19 @@ public class SignatureActivity extends AppCompatActivity {
 
         // Agrega la vista personalizada al contenedor
         signatureContainer.addView(drawView, params);
+
+        //Limpiar espacio para firma
+        Button clearButton = findViewById(R.id.clear_button);
+        clearButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                drawView.clear();
+            }
+        });
     }
+
+
+
+
+
 }

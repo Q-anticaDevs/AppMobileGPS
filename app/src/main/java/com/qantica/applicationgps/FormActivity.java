@@ -16,8 +16,7 @@ public class FormActivity extends AppCompatActivity {
     ImageView fotoForm;
     View view;
 
-    View view2;
-    @Override
+       @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_form);
@@ -45,6 +44,7 @@ public class FormActivity extends AppCompatActivity {
         startActivity(enter);
     }
 
+    //Regresar a la pantalla anterior
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         int id = item.getItemId();
@@ -54,6 +54,8 @@ public class FormActivity extends AppCompatActivity {
         }
         return super.onOptionsItemSelected(item);
     }
+
+    //Permiso para abrir cámara
     private void openCamera(){
         Intent intent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
         startActivityForResult(intent, 1);

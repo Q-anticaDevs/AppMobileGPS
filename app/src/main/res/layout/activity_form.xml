@@ -128,7 +128,7 @@
                         app:srcCompat="@android:drawable/ic_menu_camera" />
 
                     <ImageView
-                        android:id="@+id/imageView2"
+                        android:id="@+id/firmar_button"
                         android:layout_width="wrap_content"
                         android:layout_height="60dp"
                         android:layout_weight="1"

@@ -12,7 +12,7 @@ import com.bumptech.glide.request.target.DrawableImageViewTarget;
 
 public class SplashScreen extends AppCompatActivity {
 
-    private static int SPLASH_TIME_OUT = 5000; // tiempo de duración del splash
+    private static int SPLASH_TIME_OUT = 3000; // tiempo de duración del splash
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
